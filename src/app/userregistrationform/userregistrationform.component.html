@@ -1,0 +1,52 @@
+
+        <div class="container">
+        <div class="jumbotron">
+        <div class="p-3 mb-2 bg-light text-dark">
+                <span class="d-block p-2 bg-light text-dark">
+                    <h3>    
+                    User Registration Form 
+                    </h3>      
+          </span>
+            </div>
+        <form #userregform="ngForm" (ngSubmit)="onClickSubmit(userregForm.value)" >
+                <table align="left" cellpadding = "10">
+                  <tr>
+                    <td align="right"><label>First Name</label></td>
+                    <td><input type = "text" class="newform" name="firstname" id = "firstname"  placeholder = "First Name" ngModel></td>
+                  </tr>
+                  <tr>
+                        <td align="right"><label>Last Name</label></td>
+                        <td><input type = "text" class="newform" name="lastname" id = "lastname"  placeholder = "Last Name" ngModel></td>
+                      </tr>
+                  <tr>
+                    <td align="right"><label>SSO ID</label></td>
+                    <td><input type = "number" class="newform" name="ssoid" id = "ssoid"  placeholder = "SSO ID" ngModel></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label>EmailID</label></td>
+                    <td><input type = "email" class="newform" name="empemail" id = "empemail"  placeholder = "Email-ID" ngModel></td>
+                  </tr>
+                </table>
+                <br>
+             
+            <button  type = "submit" id="addbutton" name="addbutton">Register</button> 
+            <label>or</label>
+            <button type="button" id="btncancel" class="btn btn-link"> Cancel</button>
+      
+            
+   
+   <!-- <form #userregForm ="ngForm" (ngSubmit) = "onSubmit(userregForm.value)">
+    <h1><b>User Registration <Form></Form></b></h1>
+    <label> First Name</label>
+    <input type ="text" name="First Name"  ngModel><br><br>
+    <label>Last Name</label>
+    <input type ="text" name="Last Name"  ngModel><br><br>
+    <label>SSO ID</label>
+    <input type =number name="SSO ID"  ngModel><br><br>
+    <label>Email</label>
+    <input type ="Email" name="Email"  ngModel> <br><br>
+    <button id="btnadd" type="submit">Register</button>-->
+  
+    </form>
+</div>
+</div>
