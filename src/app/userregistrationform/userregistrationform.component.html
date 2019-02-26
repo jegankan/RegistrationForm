@@ -1,52 +1,59 @@
 
-        <div class="container">
-        <div class="jumbotron">
-        <div class="p-3 mb-2 bg-light text-dark">
-                <span class="d-block p-2 bg-light text-dark">
-                    <h3>    
-                    User Registration Form 
-                    </h3>      
+    <div class="container">
+    <div class="jumbotron">
+        <div class="p-1 mb-2 bg-light text-dark">
+          <span class="d-block p-2 bg-light text-dark">
+            <h4>    
+           User Registration Form 
+          </h4>      
           </span>
+      </div>
+         
+    <form #userregForm ="ngForm" (ngSubmit) = "onSubmit(userregForm.value)">
+    <div class="form-group row form-sm">
+        <label for="inputfirstname" class="col-sm-3 col-form-label">First Name</label>
+        <div class="col-sm-6">
+          <div class="md-form mt-0">
+            <input mdbInput type="text" class="form-control form-control-sm" id="inputfirstname" placeholder="First name" ngmodel>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row form-group-sm">
+          <label for="inputlastname" class="col-sm-3 col-form-label">Last Name</label>
+          <div class="col-sm-6">
+            <div class="md-form mt-0">
+              <input mdbInput type="text" class="form-control form-control-sm" id="inputlastname" placeholder="Last name"ngmodel>
             </div>
-        <form #userregform="ngForm" (ngSubmit)="onClickSubmit(userregForm.value)" >
-                <table align="left" cellpadding = "10">
-                  <tr>
-                    <td align="right"><label>First Name</label></td>
-                    <td><input type = "text" class="newform" name="firstname" id = "firstname"  placeholder = "First Name" ngModel></td>
-                  </tr>
-                  <tr>
-                        <td align="right"><label>Last Name</label></td>
-                        <td><input type = "text" class="newform" name="lastname" id = "lastname"  placeholder = "Last Name" ngModel></td>
-                      </tr>
-                  <tr>
-                    <td align="right"><label>SSO ID</label></td>
-                    <td><input type = "number" class="newform" name="ssoid" id = "ssoid"  placeholder = "SSO ID" ngModel></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><label>EmailID</label></td>
-                    <td><input type = "email" class="newform" name="empemail" id = "empemail"  placeholder = "Email-ID" ngModel></td>
-                  </tr>
-                </table>
-                <br>
-             
-            <button  type = "submit" id="addbutton" name="addbutton">Register</button> 
-            <label>or</label>
-            <button type="button" id="btncancel" class="btn btn-link"> Cancel</button>
+          </div>
+        </div>
+
+        <div class="form-group row form-group-sm">
+            <label for="inputssoid" class="col-sm-3 col-form-label">SSO ID</label>
+            <div class="col-sm-6">
+              <div class="md-form mt-0">
+                <input mdbInput type="number" class="form-control form-control-sm" id="inputssoid" placeholder="SSO ID" ngmodel>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row form-group-sm">
+              <label for="inputemail" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-6">
+                <div class="md-form mt-0">
+                  <input mdbInput type="text" class="form-control form-control-sm" id="inputemail" placeholder="Email" ngmodel>
+                </div>
+              </div>
+            </div>
+
+        <button  type = "submit" id="addbutton" name="addbutton">
+            <a routerLink="regconf">Register</a>
+        </button> 
+        <label>or</label>
+        <button type="button" id="btncancel" class="btn btn-link"> Cancel</button>
       
-            
-   
-   <!-- <form #userregForm ="ngForm" (ngSubmit) = "onSubmit(userregForm.value)">
-    <h1><b>User Registration <Form></Form></b></h1>
-    <label> First Name</label>
-    <input type ="text" name="First Name"  ngModel><br><br>
-    <label>Last Name</label>
-    <input type ="text" name="Last Name"  ngModel><br><br>
-    <label>SSO ID</label>
-    <input type =number name="SSO ID"  ngModel><br><br>
-    <label>Email</label>
-    <input type ="Email" name="Email"  ngModel> <br><br>
-    <button id="btnadd" type="submit">Register</button>-->
-  
-    </form>
-</div>
-</div>
+        </form>
+    </div>
+    </div>
+    
+    <!--<router-outlet></router-outlet>	
+    <app-userregistrationform></app-userregistrationform>-->
