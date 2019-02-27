@@ -8,13 +8,15 @@ import { UserregistrationformComponent } from './userregistrationform/userregist
 import { ListofdocumentsComponent } from './listofdocuments/listofdocuments.component';
 import { RegisterationConfirmationComponent } from './registeration-confirmation/registeration-confirmation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListofUsersComponent } from './listofusers/listofusers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserregistrationformComponent,
     ListofdocumentsComponent,
-    RegisterationConfirmationComponent
+    RegisterationConfirmationComponent,
+    ListofUsersComponent
   ],
   imports: [
     BrowserModule,

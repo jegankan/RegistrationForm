@@ -1,0 +1,24 @@
+.container {
+   
+    padding-left: 100px;
+    margin-left: -80px;
+    margin-top:10px;
+    margin-bottom: 5px;
+    width:3500px;
+  }
+  
+  #addbutton {
+    margin: 800px 650px;
+    margin-left: 790px;
+    margin-right: 0px;
+    width: 80px;
+    height: 30px;     
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color:white;
+    background-color: rgba(106, 127, 250, 0.959);
+    font-size: 1.em;
+    font-weight: 50;
+    border-radius: 5px;
+    
+   }
