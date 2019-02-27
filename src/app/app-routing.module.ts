@@ -4,14 +4,14 @@ import { ListofdocumentsComponent } from './listofdocuments/listofdocuments.comp
 import { ListofUsersComponent } from './listofusers/listofusers.component';
 import { UserregistrationformComponent } from './userregistrationform/userregistrationform.component';
 import { RegisterationConfirmationComponent } from './registeration-confirmation/registeration-confirmation.component';
-import { AppComponent } from './app.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/listofuser', pathMatch: 'full' },
   { path: 'listofuser', component:ListofUsersComponent },
-  { path: 'listofuser/Userreg', component: UserregistrationformComponent },
-  { path: 'listofuser/Userreg/regconf', component:RegisterationConfirmationComponent },
-  { path: 'listofuser/Userreg/regconf/listofuser/Userreg/listofdoc', component:ListofdocumentsComponent }
+  { path: 'Userreg', component: UserregistrationformComponent },
+  { path: 'regconf', component:RegisterationConfirmationComponent },
+  { path: 'listofdoc', component:ListofdocumentsComponent }
 ];
 
 @NgModule({
