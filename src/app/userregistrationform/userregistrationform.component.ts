@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { ApiService } from '../api.service';
+import { FormControl, NgForm } from '@angular/forms';
 
 // import { ErrorHandler, Injectable, Injector, NgZone } from '@angular/core';
  import { Router } from '@angular/router';
@@ -11,17 +13,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserregistrationformComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private api: ApiService,private router: Router) { }
    ngOnInit() {
+    
   }
 
-  onSubmit(userregForm){
+
+  onClickSubmit(userregForm){
+
     console.log(JSON.stringify(userregForm));
-    let userlist={"First name":userregForm.inputfirstname,"Last name":userregForm.inputlastname, "SSO ID":userregForm.inputssoid,"Email":userregForm.inputemail};
-    this.http.post('http://localhost:3000/employee',userlist).subscribe(status=> console.log(JSON.stringify(status))
-    );
-  }
+     alert("THE OUTPUT IS" + userregForm.firstname)
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!'+userregForm.inputfirstname);
+    let userlist={"FirstName":userregForm.firstname,"LastName":userregForm.lastname, "SSOID":userregForm.ssoid,"Email":userregForm.email};
+    //this.http.post('http://localhost:3000/employee',userlist).subscribe(status=> console.log(JSON.stringify(status))
+    this.api.postRegistrationuserform(userlist).subscribe(status=> console.log(JSON.stringify(status))
+     );
+    this.router.navigate(['/regconf']);
+  };
  }
+
 // @Injectable()
 // export class UserregistrationformComponent implements OnInit {
 

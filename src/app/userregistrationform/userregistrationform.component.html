@@ -9,49 +9,50 @@
           </span>
       </div>
          
-    <form #userregForm ="ngForm" (ngSubmit) = "onSubmit(userregForm.value)">
+    <form #userregForm ="ngForm" (ngSubmit) = "onClickSubmit(userregForm.value)">
     <div class="form-group row form-sm">
-        <label for="inputfirstname" class="col-sm-3 col-form-label">First Name</label>
+        <label for="firstname" class="col-sm-3 col-form-label">First Name</label>
         <div class="col-sm-6">
           <div class="md-form mt-0">
-            <input mdbInput type="text" class="form-control form-control-sm" id="inputfirstname" placeholder="First name" ngmodel>
+            <input mdbInput type="text" class="form-control form-control-sm" name="firstname"  [(ngModel)]="firstname"  id="firstname" placeholder="First name">
           </div>
         </div>
       </div>
-      <div class="form-group row form-group-sm">
-          <label for="inputlastname" class="col-sm-3 col-form-label">Last Name</label>
+     <div class="form-group row form-group-sm">
+          <label for="lastname" class="col-sm-3 col-form-label">Last Name</label>
           <div class="col-sm-6">
             <div class="md-form mt-0">
-              <input mdbInput type="text" class="form-control form-control-sm" id="inputlastname" placeholder="Last name"ngmodel>
+              <input mdbInput type="text" class="form-control form-control-sm" name="lastname"  [(ngModel)]="lastname" id="lastname" placeholder="Last name" ngModel>
             </div>
           </div>
         </div>
 
         <div class="form-group row form-group-sm">
-            <label for="inputssoid" class="col-sm-3 col-form-label">SSO ID</label>
+            <label for="ssoid" class="col-sm-3 col-form-label">SSO ID</label>
             <div class="col-sm-6">
               <div class="md-form mt-0">
-                <input mdbInput type="number" class="form-control form-control-sm" id="inputssoid" placeholder="SSO ID" ngmodel>
+                <input mdbInput type="number" class="form-control form-control-sm" name="ssoid"  [(ngModel)]="ssoid" id="ssoid" placeholder="SSO ID" ngModel>
               </div>
             </div>
           </div>
 
           <div class="form-group row form-group-sm">
-              <label for="inputemail" class="col-sm-3 col-form-label">Email</label>
+              <label for="email" class="col-sm-3 col-form-label">Email</label>
               <div class="col-sm-6">
                 <div class="md-form mt-0">
-                  <input mdbInput type="text" class="form-control form-control-sm" id="inputemail" placeholder="Email" ngmodel>
+                  <input mdbInput type="text" class="form-control form-control-sm" name="email"  [(ngModel)]="email"  id="email" placeholder="Email" ngModel>
                 </div>
               </div>
             </div>
-
+         
         <button  type = "submit" id="addbutton" name="addbutton">
-            <a routerLink="/regconf">Register</a>
+         Register
         </button> 
         <label>or</label>
-        <button type="button" id="btncancel" class="btn btn-link"> Cancel</button>
-      
-        </form>
+        <button type="button" id="btncancel" class="btn btn-link"> 
+        <a routerLink="/listofuser">Cancel</a>
+      </button>  
+      </form>
     </div>
     </div>
     

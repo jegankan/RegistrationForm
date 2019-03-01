@@ -19,6 +19,12 @@
                       <th scope="col">Description</th>
               </tr>
               </thead>
+              <tr *ngFor="let individual of Document">
+                <td>{{individual.No}}</td>
+                <td>{{individual.LastName}}</td>
+                <td>{{individual.Email}}</td>
+                <td>{{individual.SSOID}}</td>
+               </tr>
               </table>  
                      
               </div>
@@ -39,7 +45,7 @@
                   <div class="md-form mt-4">
                     <input type="file"
                     id="avatar" name="avatar"
-                    accept="image/png, image/jpeg, application/pdf, application/x-zip-compressed" class="form-control form-control-sm"  placeholder="No file chosen" ngmodel>
+                    accept="image/png, image/jpeg, application/pdf, application/x-zip-compressed" class="form-control form-control-sm"  placeholder="No file chosen" ngModel>
                   </div>
                 </div>
               </div>
@@ -47,7 +53,7 @@
                   <label for="inputDescription"style="padding:30px;height:35px" class="col-sm-3 col-form-label">Description</label>
                   <div class="col-sm-6">
                     <div class="md-form mt-4">
-                      <input mdbInput type="text" class="form-control form-control-sm" id="inputDocument" ngmodel>
+                      <input mdbInput type="text" class="form-control form-control-sm" id="inputDocument" ngModel>
                     </div>
                   </div>
                 </div>

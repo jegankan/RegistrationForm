@@ -8,9 +8,9 @@
                   </span>
                     </div>
             
-            <div class="card">
-                  
-                      <table class="table">
+            
+                       <div class="card">
+                      <table class="table" *ngIf="user">
                         <thead>
                         <tr>
                               <th scope="col">First Name</th>
@@ -19,9 +19,15 @@
                               <th scope="col">SSO ID</th>
                       </tr>
                       </thead>
-                      </table>  
+                      <tr *ngFor="let individual of user">
+                       <td>{{individual.FirstName}}</td>
+                       <td>{{individual.LastName}}</td>
+                       <td>{{individual.Email}}</td>
+                       <td>{{individual.SSOID}}</td>
+                      </tr>
+                      </table>
                              
-                      </div>
+                      
                
               
                       <div class="p-3 mb-2 bg-light text-dark">
@@ -34,6 +40,6 @@
                   
                     
         </div>
-        </div>          
+        </div>  
         
-        
+          
