@@ -6,6 +6,9 @@ var RegistrationuserformSchema = new mongoose.Schema({
     SSOID: String,
     updated_date: { type: Date, default: Date.now },
   });
-  module.exports = mongoose.model('Registrationuserform', RegistrationuserformSchema);
+  
+  RegistrationuserformSchema.set('toObject', {versionKey: false});
+  const Registrationuserform = mongoose.model('Registrationuserform', RegistrationuserformSchema);
 
+  module.exports = Registrationuserform;
   

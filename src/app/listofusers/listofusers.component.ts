@@ -16,6 +16,7 @@ export class ListofUsersComponent implements OnInit {
   constructor(private api: ApiService) { }
  
   ngOnInit() {
+    
     this.api.getRegistrationuserforms()
       .subscribe(res => {
         console.log(res);

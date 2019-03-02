@@ -32,7 +32,9 @@ export class ApiService {
     return body || { };
   }
   getRegistrationuserforms(): Observable<any> {
-    return this.http.get(apiUrl, httpOptions).pipe(
+    
+    const url = `${apiUrl}/listofusers`;
+    return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
@@ -46,6 +48,21 @@ export class ApiService {
   
   postRegistrationuserform(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  getListofdocform(): Observable<any> {
+    const url = `${apiUrl}/listofdoc`;
+    return this.http.get(url, httpOptions).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+  }
+
+  postListofdocform(data): Observable<any> {
+    const url = `${apiUrl}/listofdoc`;
+    return this.http.post(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
