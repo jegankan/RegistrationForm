@@ -22,13 +22,11 @@ export class UserregistrationformComponent implements OnInit {
   onClickSubmit(userregForm){
 
     console.log(JSON.stringify(userregForm));
-     alert("THE OUTPUT IS" + userregForm.firstname)
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!'+userregForm.inputfirstname);
-    let userlist={"FirstName":userregForm.firstname,"LastName":userregForm.lastname, "SSOID":userregForm.ssoid,"Email":userregForm.email};
-    //this.http.post('http://localhost:3000/employee',userlist).subscribe(status=> console.log(JSON.stringify(status))
-    this.api.postRegistrationuserform(userlist).subscribe(status=> console.log(JSON.stringify(status))
-     );
-    this.router.navigate(['/regconf']);
+      let userlist={"FirstName":userregForm.firstname,"LastName":userregForm.lastname, "SSOID":userregForm.ssoid,"Email":userregForm.email};
+    
+      this.api.postRegistrationuserform(userlist).subscribe(status=> console.log(JSON.stringify(status))
+      );
+      this.router.navigate(['/regconf']);
   };
  }
 

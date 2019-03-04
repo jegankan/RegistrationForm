@@ -29,10 +29,13 @@ export class ListofdocumentsComponent implements OnInit {
   onClickSubmit(listofDocForm){
 
     console.log(JSON.stringify(listofDocForm));
-     alert("THE OUTPUT IS" + listofDocForm.No)
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!'+listofDocForm.FileName);
-    let userlist={"No":listofDocForm.No,"FileName":listofDocForm.FileName, "Type":listofDocForm.Type,"Description":listofDocForm.Description};
-    //this.http.post('http://localhost:3000/employee',userlist).subscribe(status=> console.log(JSON.stringify(status))
+    
+    var filename=listofDocForm.avatar.slice(listofDocForm.avatar.lastIndexOf('\\')+1,listofDocForm.avatar.length);
+    var fileext=listofDocForm.avatar.slice(listofDocForm.avatar.lastIndexOf('.')+1,listofDocForm.avatar.length);
+    var filecontenttype=`image/${fileext}`;
+    
+    let userlist={"No":1,"FileName":filename, "Type.data":listofDocForm.avatar,"Type.contentType":filecontenttype,"Description":listofDocForm.inputDocument};
+    
     this.api.postListofdocform(userlist).subscribe(status=> console.log(JSON.stringify(status))
      );
     this.router.navigate(['/listofdoc']);

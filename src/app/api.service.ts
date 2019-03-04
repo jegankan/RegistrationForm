@@ -62,6 +62,10 @@ export class ApiService {
 
   postListofdocform(data): Observable<any> {
     const url = `${apiUrl}/listofdoc`;
+    console.log("+++++++++++++++++PATHFINDER+++++++++");
+    console.log(`${JSON.stringify(data)}`);
+    // data.type.data="C:/Users/jegan/OneDrive/Pictures/Screenshots/img.png";
+    // data.type.contentType='image/png';
     return this.http.post(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)

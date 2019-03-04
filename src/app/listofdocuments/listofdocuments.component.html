@@ -20,9 +20,9 @@
               </tr>
               </thead>
               <tr *ngFor="let one of doc">
-                <td>{{one.No}}</td>
+                <td>{{one._id}}</td>
                 <td>{{one.FileName}}</td>
-                <td>{{one.Type}}</td>
+                <td>{{one.Type.contentType}}</td>
                 <td>{{one.Description}}</td>
                </tr>
               </table>  
